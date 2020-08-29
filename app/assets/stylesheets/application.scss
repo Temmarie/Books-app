@@ -1,2 +1,18 @@
 @import "bootstrap/scss/bootstrap";
 @import url(http://fonts.googleapis.com/css?family=Lora|Ubuntu:300,400,500); 
+
+.navbar {
+  background-color: blue;
+}
+
+.navbar-toggler-icon {
+  color: white;
+}
+
+body {
+  background-color: rgb(240, 240, 240);
+}
+
+.fa {
+  color: grey;
+}
