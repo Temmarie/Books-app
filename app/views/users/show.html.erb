@@ -8,7 +8,7 @@
           <br />
           <div class = "setings">
             <i class = "fa fa-book icon", aria-hidden="true"></i> 
-            <%= link_to 'My Books'%>
+            <%= link_to 'My Books', books_path(current_user) %>
           </div>
         <br>
 
@@ -20,7 +20,7 @@
 
         <div class = "setings">
             <i class="fa fa-plus icon" aria-hidden="true"></i>
-            <%= link_to 'Add new book' %>
+            <%= link_to 'Add new book', new_book_path %>
         </div>
         <br />
         <div class = "setings">
