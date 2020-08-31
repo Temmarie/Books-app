@@ -38,6 +38,10 @@ class BooksController < ApplicationController
     end
   end
 
+  def external
+    @books = Book.where(user: User.where.not(id: current_user.id))
+  end
+
   # PATCH/PUT /books/1
   # PATCH/PUT /books/1.json
   def update

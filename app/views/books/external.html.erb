@@ -1,0 +1,5 @@
+<h1>Books</h1>
+
+    <% @books.each do |book|%>
+        <h4 class="journal-title"> <%= link_to book.title, book_path(book), class:"text-decoration-none text-muted" %></h4>
+    <%end%>
