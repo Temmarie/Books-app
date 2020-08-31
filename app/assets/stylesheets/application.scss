@@ -55,11 +55,21 @@ body {
 
 //Book styles
 
+.image-field input {
+  display: block;
+}
+
+.books {
+  display: flex;
+  flex-direction: row;
+}
+
 .book img {
     vertical-align: middle;
     border-style: none;
     height: 250px;
     width: 170px;
+    margin-bottom: 1em;
 }
 
 .book-show img {

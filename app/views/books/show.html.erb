@@ -1,4 +1,6 @@
-<p id="notice"><%= notice %></p>
+  <div class = "col-md-4">
+    <%= link_to image_tag(@book.image), books_path, class: "book-show" %>
+  </div>
 
 <h2>
   <%= @book.title %>

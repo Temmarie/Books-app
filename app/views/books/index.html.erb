@@ -1,11 +1,23 @@
-<h1>Books</h1>
+<div class="container-fluid">
+    <h1>Books</h1>
 
- <% if @books.count == 0%>
-        <h5> There are currently no books  in your library. <br/> Click to <%= link_to 'Add Books', new_book_path %></h5>
-      <% else %>
-    <% @books.each do |book|%>
-        <h4 class="journal-title"> <%= link_to book.title, book_path(book), class:"text-decoration-none text-muted" %></h4>
+    <% if @books.count == 0%>
+            <h5> There are currently no books  in your library. <br/> Click to <%= link_to 'Add Books', new_book_path %></h5>
+          <% else %>
+          <div class="row container-fluid books">
+        <% @books.each do |book|%>
+        
+        <div class="col-md-3 col-sm-6">
+            <a href = "<%= books_url(book.id) %>">
+                <%= link_to image_tag(book.image), book_path(book), class: "book" %>
+                            
+            </a>
+          </div>
+
+        <%end%>
+        </div>
     <%end%>
-<%end%>
-<br />
-<%= link_to 'Add new book', new_book_path, class: "p-1 text-white submit" %>
+    <br />
+    <%= link_to 'Add new book', new_book_path, class: "p-1 text-white submit" %>
+
+</div>

@@ -4,7 +4,9 @@
       <div class = "column is_4">
     <h1>Edit Book</h1>
     <%= simple_form_for @book, :html => { :multipart => true } do |f| %>
-
+          <div class = "image-field">
+              <%= f.file_field :image %>
+            </div>
       <%= f.input :title, label: "Book Title" %>
       <%= f.input :author %>
       <%= f.input :description %>
