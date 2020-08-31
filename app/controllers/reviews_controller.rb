@@ -7,7 +7,6 @@ class ReviewsController < ApplicationController
     @review = Review.new
   end
 
-
   def create
     @review = Review.new(review_params)
     @review.book_id = @book.id
