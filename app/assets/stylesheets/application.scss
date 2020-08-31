@@ -1,18 +1,181 @@
+
 @import "bootstrap/scss/bootstrap";
 @import url(http://fonts.googleapis.com/css?family=Lora|Ubuntu:300,400,500); 
 
-.navbar {
-  background-color: blue;
-}
-
-.navbar-toggler-icon {
-  color: white;
-}
 
 body {
   background-color: rgb(240, 240, 240);
 }
 
+
+//nav styles
+.navbar {
+  background-color: #3778C2;
+}
+
+.nav-item a {
+  color: white;
+}
+
+
+//log and sign in styles
+
+.btn {
+  width: 30%;
+}
+
+.submit {
+  background-color: #28a745;
+  border-color: #1e7e34;
+  box-shadow: 0 0 0 0.2rem rgba(72,180,97,0.5);
+}
+
+.cancel {
+  font-size: 16px;
+}
+
+.update .submit {
+  background-color: #28a745;
+  border-color: #1e7e34;
+  box-shadow: 0 0 0 0.2rem rgba(72,180,97,0.5);
+}
+
+.form-actions .submit {
+  background-color: #28a745;
+  border-color: #1e7e34;
+  box-shadow: 0 0 0 0.2rem rgba(72,180,97,0.5);
+}
+
+.control .submit {
+  background-color: #28a745;
+  border-color: #1e7e34;
+  box-shadow: 0 0 0 0.2rem rgba(72,180,97,0.5);
+}
+
+
+//Book styles
+
+.book img {
+    vertical-align: middle;
+    border-style: none;
+    height: 250px;
+    width: 170px;
+}
+
+.book-show img {
+  height: 375px;
+  width: 245px;
+}
+
+//stars
+
+.test-group {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0 auto;
+  width: max-content;
+}
+
+input {
+  display: none;
+}
+
+input:checked ~ label {
+  color: #ffdd40;
+}
+
+.starred ~ i, .starred {
+  color: #ffdd40;
+}
+
+.starred-div {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 .fa {
   color: grey;
+}
+
+.navbar {
+  padding: 1em;
+  background-color: #4d88d1;
+}
+
+.navbar a {
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 22.5px;
+  color: rgb(255, 255, 255);
+}
+
+.title {
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 22.5px;
+  color: skyblue;
+}
+
+.field {
+  padding: 1em;
+}
+
+.alert-success {
+  color: white;
+  font-size: 15px;
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  background-color: rgb(14, 243, 14);
+}
+
+.alert-danger {
+  color:white;
+  font-size: 15px;
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  background-color: rgb(255, 0, 0);
+}
+
+.username {
+  color: rgb(0, 255, 179);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.picture-upload {
+  color: black;
+  font-weight: 500;
+}
+
+.cancel {
+  color: black;
+  font-weight: 500;
+}
+
+.setings a {
+  color: rgb(23, 108, 235);
+  font-size: larger;
+  font-weight: 500;
+}
+
+.setings a:hover {
+  background-color: none;
+}
+
+.icon {
+  color: skyblue;
+  font-size: 2em;
+}
+
+
+.btn-success {
+  color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btn {
+  width: 30%;
 }

@@ -4,14 +4,16 @@
   <%= @book.title %>
 </h2>
 
+<p> <%= @book.description %> </p>
+
 
 <span class ="back">
-  <%= link_to "Back", root_path, class: "text-success"%>
+  <%= link_to "Back", root_path%>
 </span>
 
 <% if user_signed_in? %>
   <% if @book.user_id == current_user.id %>
-    <%= link_to "Edit", edit_book_path(@book), class: "text-success" %>
+    <%= link_to "Edit", edit_book_path(@book) %>
     <%= link_to "Delete", book_path(@book), method: :delete, data: {confirm: "Are You Sure?"} %>
   <% end %>
 <% end %>

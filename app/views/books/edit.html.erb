@@ -1,2 +1,17 @@
-<h1>Books#edit</h1>
-<p>Find me in app/views/books/edit.html.erb</p>
+<div class="section">
+ <div class = "container">
+    <div class = "columns is-centered">
+      <div class = "column is_4">
+    <h1>Edit Book</h1>
+    <%= simple_form_for @book, :html => { :multipart => true } do |f| %>
+
+      <%= f.input :title, label: "Book Title" %>
+      <%= f.input :author %>
+      <%= f.input :description %>
+
+      <%= f.button :submit, class: "submit" %>
+    <% end %>
+    </div>
+    </div>
+    </div>
+</div>

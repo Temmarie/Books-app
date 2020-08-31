@@ -1,19 +1,11 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Books</h1>
 
-
-
- <% @books.each do |book|%>
-        <div class="card mb-3">
-          <div class="card-horizontal">
-            
-            <div class="card-body">
-						
-              <h4 class="journal-title"> <%= link_to book.title, book_path(book), class:"text-decoration-none text-muted" %></h4>
-              <p class = "description"> Description: <%= link_to book.description, book_path(book)%></p>
-               
-            </div>
-          </div>
+ <% if @books.count == 0%>
+        <h5> There are currently no books  in your library. <br/> Click to <%= link_to 'Add Books', new_book_path %></h5>
+      <% else %>
+    <% @books.each do |book|%>
+        <h4 class="journal-title"> <%= link_to book.title, book_path(book), class:"text-decoration-none text-muted" %></h4>
+    <%end%>
 <%end%>
-<%= link_to 'New Book', new_book_path %>
+<br />
+<%= link_to 'Add new book', new_book_path, class: "p-1 text-white submit" %>
