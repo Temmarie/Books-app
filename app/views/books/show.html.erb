@@ -1,21 +1,23 @@
+<div class="row container-fluid">
   <div class = "col-md-4">
     <%= link_to image_tag(@book.image), books_path, class: "book-show" %>
   </div>
 
-<h2>
-  <%= @book.title %>
-</h2>
+  <div class="col-md-8">
+     <div class = "book-info">
+          <h2 class = "book-title"><%= @book.title %></h2>
+          <h4 class = "book-author"><span>From: </span><%= @book.author %></h4>
+          <p class = "book-desc"><%= @book.description %></p>
+      </div>
+  </div>
+</div>
+  <span class ="back">
+    <%= link_to "Back", root_path%>
+  </span>
 
-<p> <%= @book.description %> </p>
-
-
-<span class ="back">
-  <%= link_to "Back", root_path%>
-</span>
-
-<% if user_signed_in? %>
-  <% if @book.user_id == current_user.id %>
-    <%= link_to "Edit", edit_book_path(@book) %>
-    <%= link_to "Delete", book_path(@book), method: :delete, data: {confirm: "Are You Sure?"} %>
+  <% if user_signed_in? %>
+    <% if @book.user_id == current_user.id %>
+      <%= link_to "Edit", edit_book_path(@book) %>
+      <%= link_to "Delete", book_path(@book), method: :delete, data: {confirm: "Are You Sure?"} %>
+    <% end %>
   <% end %>
-<% end %>
