@@ -12,7 +12,13 @@ class BooksController < ApplicationController
   # GET /books/1
   # GET /books/1.json
   def show
+    @average_review = if @book.reviews.blank?
+                        0
+                      else
+                        @book.reviews.average(:rating)#.round(2)
+                      end
   end
+
 
   # GET /books/new
   def new

@@ -2,6 +2,13 @@
 @import "bootstrap/scss/bootstrap";
 @import url(http://fonts.googleapis.com/css?family=Lora|Ubuntu:300,400,500); 
 
+@mixin background-tile {
+	box-sizing: border-box;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 3px 3px 5px 6px #ccc;
+	padding: 1.5em 1.25em;
+}
 
 body {
   background-color: rgb(240, 240, 240);
@@ -70,11 +77,13 @@ body {
     height: 250px;
     width: 170px;
     margin-bottom: 1em;
+    @include background-tile;
 }
 
 .book-show img {
   height: 375px;
   width: 245px;
+  @include background-tile;
 }
 
 //stars
@@ -103,9 +112,6 @@ input:checked ~ label {
   flex-direction: row-reverse;
 }
 
-.fa {
-  color: grey;
-}
 
 .navbar {
   padding: 1em;
@@ -188,4 +194,75 @@ input:checked ~ label {
 
 .btn {
   width: 30%;
+}
+
+
+/* Book styles */
+
+.book-info {
+	@include background-tile;
+
+	.book-title {
+		margin-top: 0;
+		font-size: 2em;
+	}
+
+	.avg-rating {
+		font-size: 1.5em;
+		margin-top: 15px;
+		margin-bottom: 5px;
+	}
+
+	.number-of-reviews {
+		font-size: 0.85em;
+		font-style: italic;
+	}
+
+	.book-author {
+		font-size: 1.5em;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		span {
+			font-size: 0.80em;
+		}	
+	}
+
+	.book-desc {
+		font-size: 1.05em;
+		line-height: 1.5;
+		margin-bottom: 15px;
+		margin-top: 15px;
+	}
+
+}
+
+/* Reviews styles */
+
+.reviews {
+
+	@include background-tile;
+	margin-top: 40px;
+
+	h1 {
+		margin-top: 0;
+		margin-bottom: 15px;
+		font-size: 2em;
+	}
+
+	.review {
+		border-bottom: 1px solid gainsboro;
+		margin-bottom: 15px;
+		padding-bottom: 10px;
+
+		.review-comment {
+			font-size: 1.05em;
+			line-height: 1.5;
+		}
+
+	}
+
+	.new-review {
+		padding-top: 8px;
+	}
+
 }
