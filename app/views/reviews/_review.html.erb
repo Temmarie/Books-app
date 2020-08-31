@@ -1,0 +1,21 @@
+          <div class = "starred-div">
+            <% 5.times do |i| %>
+              <% if review.rating  && review.rating  > i && review.rating < i + 1 %>
+                 <i class="fa fa-star-half-o starred" aria-hidden="true"></i>
+              <% elsif review.rating.nil? || review.rating > i+1 %>
+                <i class="fa fa-star-o " aria-hidden="true"></i>
+              <% else %>
+                  <i class="fa fa-star <%=review.rating == i + 1 ? "starred" : " " %>" aria-hidden="true"></i>
+                <%end%>
+            <%end%>
+          </div>
+<p>  <%= review.comment %> </p>
+
+<% if user_signed_in? %>
+		<% if review.user_id == current_user.id %>
+			<div>
+        <%= link_to "Edit", edit_book_review_path(review.book, review), class: "btn btn-custom" %>
+        <%= link_to "Delete", book_reviews_path(review.book_id, review.id), method: :delete, data: { confirm: "Are you sure?" } %>
+			</div>
+    <% end %>
+<% end %>

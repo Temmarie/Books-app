@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'users/show'
   devise_for :users
   get 'external', to: 'books#external'
-  resources :books
+  resources :books do
+    resources :reviews
+  end
   root 'users#show'
 end

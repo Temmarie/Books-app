@@ -1,23 +1,53 @@
-<div class="row container-fluid">
+<div class = "row container-fluid">
   <div class = "col-md-4">
     <%= link_to image_tag(@book.image), books_path, class: "book-show" %>
   </div>
 
-  <div class="col-md-8">
-     <div class = "book-info">
-          <h2 class = "book-title"><%= @book.title %></h2>
-          <h4 class = "book-author"><span>From: </span><%= @book.author %></h4>
-          <p class = "book-desc"><%= @book.description %></p>
-      </div>
-  </div>
-</div>
-  <span class ="back">
-    <%= link_to "Back", root_path%>
-  </span>
+  <div class = "col-md-8">
 
-  <% if user_signed_in? %>
-    <% if @book.user_id == current_user.id %>
-      <%= link_to "Edit", edit_book_path(@book) %>
-      <%= link_to "Delete", book_path(@book), method: :delete, data: {confirm: "Are You Sure?"} %>
-    <% end %>
+        <div class = "book-info">
+          <h2 class = "book-title"><%= @book.title %></h2>
+          <h3 class = "book-author"><span>From: </span><%= @book.author %></h3>
+          <h2 class = "avg-rating">Average Rating</h2>
+          <div class = "average-review-rating" data-score = <%= @average_review%>></div>
+          <div class = "starred-div">
+            <% 5.times do |i| %>
+              <% if @average_review && @average_review > i && @average_review < i + 1 %>
+                 <i class="fa fa-star-half-o starred" aria-hidden="true"></i>
+              <% elsif @average_review.nil? || @average_review > i+1 %>
+                <i class="fa fa-star-o " aria-hidden="true"></i>
+              <% else %>
+                  <i class="fa fa-star <%= @average_review == i + 1 ? "starred" : " " %>" aria-hidden="true"></i>
+                <%end%>
+            <%end%>
+          </div>
+          <span class= "number-of-reviews">Based on  <%= @book.reviews.count %> reviews </span>
+          <p class = "book-desc"><%= @book.description %></p>
+        </div>
+  </div>
+
+</div>
+
+  <div>
+    <div class = "col-md-4">
+
+      <div class = "reviews">
+          <h1>Reviews</h1>
+          <%= render @book.reviews %>
+    <div>
+          <%= link_to "Add Review", new_book_review_path(@book) %>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<span class ="back">
+  <%= link_to "Back", root_path, class: "text-success"%>
+</span>
+
+<% if user_signed_in? %>
+  <% if @book.user_id == current_user.id %>
+    <%= link_to "Edit", edit_book_path(@book), class: "text-success" %>
+    <%= link_to "Delete", book_path(@book), method: :delete, data: {confirm: "Are You Sure?"} %>
   <% end %>
+<% end %>
