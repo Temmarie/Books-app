@@ -5,10 +5,6 @@
   <h4 class="card-title text-muted">You have <%= pluralize(@books.count, "book")%> in your library: </h4>
 
 </div>
-
-    <% if @books.count == 0%>
-            <h5> There are currently no books  in your library. <br/> Click to <%= link_to 'Add Books', new_book_path %></h5>
-          <% else %>
           <div class="row container-fluid books">
         <% @books.each do |book|%>
         
@@ -21,7 +17,6 @@
 
         <%end%>
         </div>
-    <%end%>
     <br />
     <%= link_to 'Add new book', new_book_path, class: "p-1 text-white submit" %>
 

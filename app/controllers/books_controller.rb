@@ -2,15 +2,12 @@ class BooksController < ApplicationController
   before_action :set_book, only: %i[show edit update destroy]
   before_action :authenticate_user!, only: %i[new edit]
 
-  # GET /books
-  # GET /books.json
   def index
     @user = current_user
-    @books = Book.where(user: current_user)
+    @books = Book.where(user: current_user).includes([:groups])
   end
 
-  # GET /books/1
-  # GET /books/1.json
+
   def show
     @average_review = if @book.reviews.blank?
                         0
@@ -19,16 +16,13 @@ class BooksController < ApplicationController
                       end
   end
 
-  # GET /books/new
+
   def new
     @book = current_user.books.build
   end
 
-  # GET /books/1/edit
   def edit; end
 
-  # POST /books
-  # POST /books.json
   def create
     @book = current_user.books.build(book_params)
 
@@ -44,11 +38,9 @@ class BooksController < ApplicationController
   end
 
   def external
-    @books = Book.where(user: User.where.not(id: current_user.id))
+    @books = Book.where(user: User.where.not(id: current_user.id)).includes([:groups])
   end
 
-  # PATCH/PUT /books/1
-  # PATCH/PUT /books/1.json
   def update
     respond_to do |format|
       if @book.update(book_params)
@@ -61,8 +53,6 @@ class BooksController < ApplicationController
     end
   end
 
-  # DELETE /books/1
-  # DELETE /books/1.json
   def destroy
     @book.destroy
     respond_to do |format|
@@ -73,13 +63,12 @@ class BooksController < ApplicationController
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
+
   def set_book
     @book = Book.find(params[:id])
   end
 
-  # Only allow a list of trusted parameters through.
   def book_params
-    params.require(:book).permit(:title, :author, :description, :image)
+    params.require(:book).permit(:title, :author, :description, :image, group_ids: [])
   end
 end
