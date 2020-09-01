@@ -2,18 +2,35 @@
  <div class = "container">
     <div class = "columns is-centered">
       <div class = "column is_4">
-    <h1>Edit Book</h1>
-    <%= simple_form_for @book, :html => { :multipart => true } do |f| %>
-          <div class = "image-field">
+          <h1>Edit Book</h1>
+          <%= simple_form_for(@book) do |f| %>
+            <%= f.error_notification %>
+            <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+            <div class="form-inputs ">
+            <div class = "image-field">
               <%= f.file_field :image %>
             </div>
-      <%= f.input :title, label: "Book Title" %>
-      <%= f.input :author %>
-      <%= f.input :description %>
+              <%= f.input :title %>
+              <%= f.input :author %>
+              <%= f.input :description %>
+            </div>
 
-      <%= f.button :submit, class: "submit" %>
-    <% end %>
-    </div>
-    </div>
+            
+            <div class="form-group row">
+              <%= f.label :groups, class:"col-2 col-form-label"%>
+                <div class="col-10 px-0 mx-0 group-check">
+                  <%= f.collection_check_boxes :group_ids, Group.where(user: current_user), :id, :name do |cb| %>
+                    <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "mx-3 checkbox  shadow rounded") + cb.text } %>
+                  <% end %> 
+                </div>      
+            </div>
+
+            <div class="form-actions">
+              <%= f.button :submit,class: "submit" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
     </div>
 </div>

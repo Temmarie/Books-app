@@ -1,0 +1,38 @@
+<div class="nav">
+    <h3 class="text-white center-nav"> <%= @group.name %></h3>
+</div>
+
+<div class="card">
+  <div class="card-horizontal">
+    <div class="card-body">
+      <h4 class="card-title text-muted">This group has <%= pluralize(@group.books.count, "book") %>: </h4>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 mt-3">
+			<% @books.each do |book|%>
+        <div class="card mb-3">
+          <div class="card-horizontal">
+		        <div class="img-square-wrapper ">
+            <% if book.image.attached? %>
+               <%= link_to image_tag(book.image), books_path(book), class: "book-group" %>
+            <% end %>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title"> <%= link_to book.title, book_path(book), class:"text-decoration-none text-muted" %></h4>
+            </div>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Created <%= time_ago_in_words(book.created_at)%> ago </small>
+          </div>
+        </div>
+			<% end %>
+		</div>
+  </div>
+  
+    <%= link_to 'Add new book', new_book_path, class: "p-1 text-white submit" %>
+
+</div>

@@ -266,3 +266,29 @@ input:checked ~ label {
 	}
 
 }
+
+.group-check input {
+  display: inline-block;
+}
+
+.book-group img {
+    height: 220px;
+    width: 180px;
+}
+
+.center-nav {
+  display: flex;
+  align-items: center;
+  margin-left: 25%;
+}
+
+.center-nav-2 {
+  display: flex;
+  align-items: center;
+  margin-left: 15%;
+}
+
+.card-horizontal {
+  display: flex;
+  flex: 1 1 auto;
+}
