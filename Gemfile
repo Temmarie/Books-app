@@ -29,7 +29,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'activestorage'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'bullet'
-gem 'cloudinary'
+gem "aws-sdk-s3", require: false
 gem 'devise'
 gem 'jquery-rails'
 gem 'pg'
