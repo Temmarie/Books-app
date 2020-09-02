@@ -3,7 +3,7 @@
     <div class = "columns is-centered">
       <div class = "column is_4">
 
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<h2 class = "title is-2">Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
@@ -38,6 +38,14 @@
   </div>
   <small class = "form-text text-muted"> <%= ( "We need your current password to confirm your changes") %></small>
  <div>
+
+
+<div class ="field">
+<div class = "control">
+<p class = "picture-upload">Upload your profile picture</p>
+    <%= f.file_field :image, direct_upload: true %>
+</div>
+</div>
 
   <div class="field">
 			<div class="control">

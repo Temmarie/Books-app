@@ -34,6 +34,8 @@ body {
   background-color: #28a745;
   border-color: #1e7e34;
   box-shadow: 0 0 0 0.2rem rgba(72,180,97,0.5);
+  color: white;
+  font-weight: bold;
 }
 
 .cancel {
@@ -130,7 +132,7 @@ input:checked ~ label {
   font-size: 40px;
   font-weight: 600;
   line-height: 22.5px;
-  color: skyblue;
+  color: black;
 }
 
 .field {
