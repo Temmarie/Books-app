@@ -35,19 +35,18 @@
           <h1>Reviews</h1>
           <%= render @book.reviews %>
     <div>
-          <%= link_to "Add Review", new_book_review_path(@book) %>
+          <%= link_to "Add Review", new_book_review_path(@book), class: "btn btn-success" %>
         </div>
       </div>
     </div>
+  <div class="navs">
+    <% if user_signed_in? %>
+      <% if @book.user_id == current_user.id %>
+        <%= link_to "Edit", edit_book_path(@book)%>
+        <%= link_to "Delete", book_path(@book), method: :delete, data: {confirm: "Are You Sure?"} %>
+      <% end %>
+    <% end %>
   </div>
-  
-<span class ="back">
-  <%= link_to "Back", root_path %>
-</span>
+  </div>
 
-<% if user_signed_in? %>
-  <% if @book.user_id == current_user.id %>
-    <%= link_to "Edit", edit_book_path(@book)%>
-    <%= link_to "Delete", book_path(@book), method: :delete, data: {confirm: "Are You Sure?"} %>
-  <% end %>
-<% end %>
+ 
