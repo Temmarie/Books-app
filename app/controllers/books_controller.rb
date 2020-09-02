@@ -12,7 +12,7 @@ class BooksController < ApplicationController
     @average_review = if @book.reviews.blank?
                         0
                       else
-                        @book.reviews.average(:rating) # .round(2)
+                        @book.reviews.average(:rating).round(2)
                       end
   end
 
