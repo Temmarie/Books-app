@@ -1,6 +1,6 @@
 <div class = "row container-fluid">
   <div class = "col-md-4 mb-4">
-    <%= link_to image_tag(@book.image), books_path, class: "book-show" %>
+    <%= link_to cl_image_tag(@book.image), books_path, class: "book-show" %>
   </div> <br />
 
   <div class = "col-md-8">
