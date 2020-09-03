@@ -1,18 +1,39 @@
-<h3>Books other people are reading</h3>
-<br />
-<div>
-  <h4 class="card-title text-muted">Here are <%= pluralize(@books.size, "book")%> that you may enjoy:</h4>
+<div class="card">
+  <div class="card-horizontal">
+    <div class="card-body">
+      <h4 class="card-title text-muted">Here are <%= pluralize(@books.size, "book")%> that you may enjoy:</h4>
+    </div>
+  </div>
+</div>          
 
-</div>
-          <div class="row container-fluid books">
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 mt-3">
         <% @books.each do |book|%>
         
-        <div class="col-md-3 col-sm-6">
+<div class="card mb-3">
+          <div class="card-horizontal">
+            <div class="img-square-wrapper">
             <a href = "<%= books_url(book.id) %>">
                 <%= link_to cl_image_tag(book.image), book_path(book), class: "book" %>
                             
             </a>
           </div>
+            <div class="card-body">
+						
+              <h4 class="card-title"> <%= link_to book.title, book_path(book), class:"text-decoration-none text-muted" %></h4>
+              <p class="card-text  text-muted ">Author: <%= book.author %></p>
+              </div>
+              </div>
+
+               <div class="card-footer">
+            <small class="text-muted">Created <%= time_ago_in_words(book.created_at)%> ago</small>
+          </div>
+        </div>
 
         <%end%>
         </div>
+	</div>
+  </div>
+</div>
