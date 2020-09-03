@@ -36,6 +36,7 @@ RSpec.configure do |config|
   if Bullet.enable?
     config.before(:each) { Bullet.start_request }
     config.after(:each) { Bullet.end_request }
+    Bullet.alert = true
   end
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false

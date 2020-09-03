@@ -27,6 +27,6 @@ RSpec.describe 'Signing In a new user', type: :feature do
   scenario 'add book group' do
     visit root_path
     click_on 'Groups'
-    expect(page).to have_content('Your Groups')
+    expect(page).to have_content('Groups')
   end
 end
