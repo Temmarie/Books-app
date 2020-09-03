@@ -13,10 +13,10 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-Ruby: 2.6.3
-Rails: 5.2.3
-Postgres: >=9.5
-You can set up webpacker locally [here](https://github.com/rails/webpacker#installation)
+- Ruby: 2.6.3
+- Rails: 5.2.3
+- Postgres: >=9.5
+- You can set up webpacker locally [here](https://github.com/rails/webpacker#installation)
 ### Setup
 
 Instal gems with:
@@ -55,9 +55,9 @@ Open `http://localhost:3000/` in your browser.
 
 👤 Grace Tamara Ekunola
 
-Github: @Temmarie
-Twitter: @TemmarieW
-Linkedin: Grace Tife Ekunola
+- Github: @Temmarie
+- Twitter: @TemmarieW
+- Linkedin: Grace Tife Ekunola
 
 ## 🤝 Contributing
 
