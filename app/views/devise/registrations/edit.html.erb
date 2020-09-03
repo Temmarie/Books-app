@@ -8,6 +8,13 @@
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
 
+
+		<div class="field">
+	  	<div class="control">
+	    <%= f.input :name, required: true, input_html: { class:"input" }, wrapper: false, label_html: { class:"label" } %>
+	  	</div>
+		</div>
+
   <div class = "field">
     <div class = "control">
     <%= f.input :email, required: true, input_html: { class:"input" }, wrapper: false, label_html: { class:"label" }, autofocus: true %>
@@ -39,13 +46,6 @@
   <small class = "form-text text-muted"> <%= ( "We need your current password to confirm your changes") %></small>
  <div>
 
-
-<div class ="field">
-<div class = "control">
-<p class = "picture-upload">Upload your profile picture</p>
-    <%= f.file_field :image, direct_upload: true %>
-</div>
-</div>
 
   <div class="field">
 			<div class="control">
