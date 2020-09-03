@@ -2,7 +2,7 @@
     <h1 class="text-dark center-nav"><%= @user.name %>'s Books</h1>
 
 <div>
-  <h4 class="card-title text-muted">You have <%= pluralize(@books.count, "book")%> in your library: </h4>
+  <h4 class="card-title text-muted">You have <%= pluralize(@books.size, "book")%> in your library: </h4>
 
 </div>
           <div class="row container-fluid books">

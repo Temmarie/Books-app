@@ -1,4 +1,3 @@
-
 @import "bootstrap/scss/bootstrap";
 
 @mixin background-tile {
@@ -9,19 +8,22 @@
   padding: 1.5em 1.25em;
 }
 
-body {
-  background-color: rgb(240, 240, 240);
-  font-family: "Roboto Condensed", sans-serif;
-  color: rgb(255, 255, 255);
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: #faf8f7;
+}
 //nav styles
 .navbar {
   background-color: #3778c2;
   padding: 1em;
-  font-size: 35px;
-  font-weight: 700;
-  line-height: 80px;
 }
 
 .nav-item a {
