@@ -31,6 +31,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'bullet', require: true
 # gem "aws-sdk-s3", require: false
 gem 'cloudinary'
+gem 'carrierwave'
 gem 'devise'
 gem 'jquery-rails'
 gem 'pg'
