@@ -70,4 +70,5 @@ Feel free to check the [issues page](issues/).
 Give a ⭐️ if you like this project!
 
 
-
+## Acknowledgements
+- The original designer of the UI for this application is [Gregoire Vella](https://www.behance.net/gregoirevella)
