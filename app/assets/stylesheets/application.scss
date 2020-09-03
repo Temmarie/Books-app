@@ -2,27 +2,26 @@
 @import "bootstrap/scss/bootstrap";
 
 @mixin background-tile {
-	box-sizing: border-box;
-	background-color: #fff;
-	border-radius: 5px;
-	box-shadow: 3px 3px 5px 6px #ccc;
-	padding: 1.5em 1.25em;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px 6px #ccc;
+  padding: 1.5em 1.25em;
 }
 
 body {
   background-color: rgb(240, 240, 240);
 }
 
-
 //nav styles
 .navbar {
-  background-color: #3778C2;
+  background-color: #3778c2;
+  padding: 1em;
 }
 
 .nav-item a {
   color: white;
 }
-
 
 //log and sign in styles
 
@@ -33,35 +32,33 @@ body {
 .submit {
   background-color: #28a745;
   border-color: #1e7e34;
-  box-shadow: 0 0 0 0.2rem rgba(72,180,97,0.5);
+  box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
   color: white;
   font-weight: bold;
-}
-
-.cancel {
-  font-size: 16px;
 }
 
 .update .submit {
   background-color: #28a745;
   border-color: #1e7e34;
-  box-shadow: 0 0 0 0.2rem rgba(72,180,97,0.5);
+  box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
 }
 
 .form-actions .submit {
   background-color: #28a745;
   border-color: #1e7e34;
-  box-shadow: 0 0 0 0.2rem rgba(72,180,97,0.5);
+  box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
 }
 
 .control .submit {
   background-color: #28a745;
   border-color: #1e7e34;
-  box-shadow: 0 0 0 0.2rem rgba(72,180,97,0.5);
+  box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
 }
 
-
 //Book styles
+input {
+  display: none;
+}
 
 .image-field input {
   display: block;
@@ -73,17 +70,19 @@ body {
 }
 
 .book img {
-    vertical-align: middle;
-    border-style: none;
-    height: 250px;
-    width: 170px;
-    margin-bottom: 1em;
-    @include background-tile;
+  vertical-align: middle;
+  border-style: none;
+  height: 250px;
+  width: 170px;
+  margin-bottom: 1em;
+
+  @include background-tile;
 }
 
 .book-show img {
   height: 375px;
   width: 245px;
+
   @include background-tile;
 }
 
@@ -96,27 +95,18 @@ body {
   width: max-content;
 }
 
-input {
-  display: none;
-}
-
 input:checked ~ label {
   color: #ffdd40;
 }
 
-.starred ~ i, .starred {
+.starred ~ i,
+.starred {
   color: #ffdd40;
 }
 
 .starred-div {
   display: flex;
   flex-direction: row-reverse;
-}
-
-
-.navbar {
-  padding: 1em;
-  background-color: #4d88d1;
 }
 
 .navbar a {
@@ -148,7 +138,7 @@ input:checked ~ label {
 }
 
 .alert-danger {
-  color:white;
+  color: white;
   font-size: 15px;
   font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 600;
@@ -169,6 +159,7 @@ input:checked ~ label {
 .cancel {
   color: black;
   font-weight: 500;
+  font-size: 16px;
 }
 
 .setings a {
@@ -177,15 +168,10 @@ input:checked ~ label {
   font-weight: 500;
 }
 
-.setings a:hover {
-  background-color: none;
-}
-
 .icon {
   color: skyblue;
   font-size: 2em;
 }
-
 
 .btn-success {
   color: #fff;
@@ -193,79 +179,72 @@ input:checked ~ label {
   border-color: #28a745;
 }
 
-.btn {
-  width: 30%;
-}
-
-
 /* Book styles */
 
 .book-info {
-	@include background-tile;
+  @include background-tile;
 
-	.book-title {
-		margin-top: 0;
-		font-size: 2em;
-	}
+  .book-title {
+    margin-top: 0;
+    font-size: 2em;
+  }
 
-	.avg-rating {
-		font-size: 1.5em;
-		margin-top: 15px;
-		margin-bottom: 5px;
-	}
+  .avg-rating {
+    font-size: 1.5em;
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
 
-	.number-of-reviews {
-		font-size: 0.85em;
-		font-style: italic;
-	}
+  .number-of-reviews {
+    font-size: 0.85em;
+    font-style: italic;
+  }
 
-	.book-author {
-		font-size: 1.5em;
-		margin-top: 10px;
-		margin-bottom: 10px;
-		span {
-			font-size: 0.80em;
-		}	
-	}
+  .book-author {
+    font-size: 1.5em;
+    margin-top: 10px;
+    margin-bottom: 10px;
 
-	.book-desc {
-		font-size: 1.05em;
-		line-height: 1.5;
-		margin-bottom: 15px;
-		margin-top: 15px;
-	}
+    span {
+      font-size: 0.8em;
+    }
+  }
 
+  .book-desc {
+    font-size: 1.05em;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
 }
 
 /* Reviews styles */
 
 .reviews {
+  @include background-tile;
 
-	@include background-tile;
-	margin-top: 40px;
+  margin-top: 40px;
 
-	h1 {
-		margin-top: 0;
-		margin-bottom: 15px;
-		font-size: 2em;
-	}
+  h1 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 2em;
+  }
 
-	.review {
-		border-bottom: 1px solid gainsboro;
-		margin-bottom: 15px;
-		padding-bottom: 10px;
+  .review {
+    border-bottom: 1px solid gainsboro;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
 
-		.review-comment {
-			font-size: 1.05em;
-			line-height: 1.5;
-		}
+    .review-comment {
+      font-size: 1.05em;
+      line-height: 1.5;
+    }
+  }
 
-	}
-
-	.new-review {
-		padding-top: 8px;
-	}
-
+  .new-review {
+    padding-top: 8px;
+  }
 }
 
 .group-check input {
@@ -273,8 +252,8 @@ input:checked ~ label {
 }
 
 .book-group img {
-    height: 220px;
-    width: 180px;
+  height: 220px;
+  width: 180px;
 }
 
 .center-nav {
@@ -295,5 +274,5 @@ input:checked ~ label {
 }
 
 .navs {
-  margin: 0px 14px;
+  margin: 0 14px;
 }

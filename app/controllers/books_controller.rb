@@ -7,7 +7,6 @@ class BooksController < ApplicationController
     @books = Book.where(user: current_user).includes([:groups])
   end
 
-
   def show
     @average_review = if @book.reviews.blank?
                         0
@@ -15,7 +14,6 @@ class BooksController < ApplicationController
                         @book.reviews.average(:rating).round(2)
                       end
   end
-
 
   def new
     @book = current_user.books.build
@@ -62,7 +60,6 @@ class BooksController < ApplicationController
   end
 
   private
-
 
   def set_book
     @book = Book.find(params[:id])

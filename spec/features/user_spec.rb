@@ -3,9 +3,10 @@ require 'rails_helper'
 RSpec.describe 'Signing In a new user', type: :feature do
   before(:each) do
     @user = User.new(
-                     email: 'Trish@email.com',
-                     password: 'qwerty',
-                     password_confirmation: 'qwerty')
+      email: 'Trish@email.com',
+      password: 'qwerty',
+      password_confirmation: 'qwerty'
+    )
     @user.save
     visit new_user_session_path
 
