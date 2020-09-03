@@ -9,7 +9,7 @@
         
         <div class="col-md-3 col-sm-6">
             <a href = "<%= books_url(book.id) %>">
-                <%= link_to image_tag(book.image), book_path(book), class: "book" %>
+                <%= link_to cl_image_tag(book.image), book_path(book), class: "book" %>
                             
             </a>
           </div>
