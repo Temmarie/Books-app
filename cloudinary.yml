@@ -1,0 +1,20 @@
+production:
+  cloud_name: 'temmarie'
+  api_key: '497268631397788'
+  api_secret: auytOfzONPqS6UpfF8esLk43CJA
+  enhance_image_tag: true
+  static_file_support: true
+
+development:
+  cloud_name: 'temmarie'
+  api_key: '497268631397788'
+  api_secret: auytOfzONPqS6UpfF8esLk43CJA
+  enhance_image_tag: true
+  static_file_support: true
+
+test:
+  cloud_name: 'temmarie'
+  api_key: '497268631397788'
+  api_secret: auytOfzONPqS6UpfF8esLk43CJA
+  enhance_image_tag: true
+  static_file_support: false
