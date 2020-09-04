@@ -15,7 +15,6 @@
 		<% if review.user_id == current_user.id %>
 			<div>
         <%= link_to "Edit", edit_book_review_path(review.book, review), class: "btn btn-custom" %>
-        <%= link_to "Delete", book_reviews_path(review.book_id, review.id), method: :delete, data: { confirm: "Are you sure?" } %>
 			</div>
     <% end %>
 <% end %>
