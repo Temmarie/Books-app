@@ -23,4 +23,9 @@ RSpec.describe 'Signing In a new user', type: :feature do
     click_on 'Add new book'
     expect(page).to have_content('New Book')
   end
+
+  scenario 'add review' do
+    visit books_path
+    expect(page).to have_content(@user.name)
+  end
 end
