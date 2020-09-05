@@ -50,6 +50,7 @@ Open `http://localhost:3000/` in your browser.
     rpsec spec
 ```
 ### Deployment
+[Live link](https://bookgroups.herokuapp.com/)
 
 ## Author
 
