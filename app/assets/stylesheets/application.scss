@@ -85,9 +85,6 @@ input {
 .book-show img {
   height: 375px;
   width: 245px;
-  margin-bottom: 1em;
-
-  @include background-tile;
 }
 
 //stars
@@ -193,12 +190,6 @@ input:checked ~ label {
     font-size: 2em;
   }
 
-  .avg-rating {
-    font-size: 1.5em;
-    margin-top: 15px;
-    margin-bottom: 5px;
-  }
-
   .number-of-reviews {
     font-size: 0.85em;
     font-style: italic;
@@ -278,5 +269,16 @@ input:checked ~ label {
 }
 
 .navs {
-  margin: 0 14px;
+  margin: 0 auto;
+  justify-content: space-evenly;
+}
+
+.navs a {
+  color: rgb(108, 117, 125);
+}
+
+.set {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row;
 }

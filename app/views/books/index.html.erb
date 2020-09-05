@@ -1,40 +1,41 @@
 <div class="container-fluid">
     <div class="container-fluid">
-        <h1 class="text-dark center-nav"><%= @user.name %>'s Books</h1>
-      </div>
-<div class="card">
-  <div class="card-horizontal">
-    <div class="card-body">
-      <h4 class="card-title text-muted">You have <%= pluralize(@books.size, "book")%> </h4>
-    </div>
-  </div>
-</div>
-
-              <div class=" container">
-              <div class="row">
-              <div class="col-12 mt-3">
-            <% @books.each do |book|%>
-            
-            <div class="card mb-3">
-            <div class="card-horizontal">
-            <div class="img-square-wrapper">
-                <a href = "<%= books_url(book.id) %>">
-                    <%= link_to cl_image_tag(book.image), book_path(book), class: "book" %>
-
-                </a>
-              </div>
-              <div class="card-body">
-                  <h4 class="card-title"> <%= link_to book.title, book_path(book), class:"text-decoration-none text-muted" %></h4>
-                  <p class="card-text  text-muted ">Author: <%= book.author %></p>
-                   <%= render book.groups%>
-              </div>
-</div>
- <div class="card-footer">
-            <small class="text-muted">Created <%= time_ago_in_words(book.created_at)%> ago</small>
+        <div class="container-fluid">
+            <h1 class="text-dark center-nav"><%= @user.name %>'s Books</h1>
           </div>
+    <div class="card">
+      <div class="card-horizontal">
+        <div class="card-body">
+          <h4 class="card-title text-muted">You have <%= pluralize(@books.size, "book")%> </h4>
         </div>
-            <%end%>
+      </div>
+    </div>
+
+        <div class=" container">
+          <div class="row">
+            <div class="col-12 mt-3">
+              <% @books.each do |book|%>
+                <div class="card mb-3">
+                  <div class="card-horizontal">
+                  <div class="img-square-wrapper">
+                      <a href = "<%= books_url(book.id) %>">
+                          <%= link_to cl_image_tag(book.image), book_path(book), class: "book"%>
+                      </a>
+                  </div>
+                  <div class="card-body">
+                      <h4 class="card-title"> <%= link_to book.title, book_path(book), class:"text-decoration-none text-muted" %></h4>
+                      <p class="card-text  text-muted ">Author: <%= book.author %></p>
+                      <%= render book.groups%>
+                  </div>
+    </div>
+    <div class="card-footer">
+                <small class="text-muted">Created <%= time_ago_in_words(book.created_at)%> ago</small>
+              </div>
             </div>
-        <br />
-        <%= link_to 'Add new book', new_book_path, class: "p-1 text-white submit" %>
+                <%end%>
+                </div>
+            <br />
+            <%= link_to 'Add new book', new_book_path, class: "p-1 text-white submit" %>
+    </div>
+
 </div>

@@ -1,14 +1,6 @@
-          <div class = "starred-div">
-            <% 5.times do |i| %>
-              <% if review.rating  && review.rating  > i && review.rating < i + 1 %>
-                 <i class="fa fa-star-half-o starred" aria-hidden="true"></i>
-              <% elsif review.rating.nil? || review.rating > i+1 %>
-                <i class="fa fa-star-o " aria-hidden="true"></i>
-              <% else %>
-                  <i class="fa fa-star <%=review.rating == i + 1 ? "starred" : " " %>" aria-hidden="true"></i>
-                <%end%>
-            <%end%>
-          </div>
+            <div class="starred-div">
+              <%= star_reviews(@average_review) %>
+            </div>
 <p>  <%= review.comment %> </p>
 
 <% if user_signed_in? %>
