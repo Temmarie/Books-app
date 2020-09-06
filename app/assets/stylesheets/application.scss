@@ -282,3 +282,7 @@ input:checked ~ label {
   justify-content: space-between;
   flex-flow: row;
 }
+
+.form-group input {
+  display: inline-block;
+}
