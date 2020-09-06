@@ -1,49 +1,3 @@
-<!--<div class="container-fluid">
-  <div class = "row container-fluid">
-    <div class = "col-md-4 mb-4">
-      <%= link_to cl_image_tag(@book.image), books_path, class: "book-show" %>
-    </div> <br />
-
-    <div class = "col-md-8">
-
-          <div class = "book-info">
-            <h2 class = "book-title"><%= @book.title %></h2>
-            <h3 class = "book-author"><span>From: </span><%= @book.author %></h3>
-            <h2 class = "avg-rating">Average Rating</h2>
-            <div class = "average-review-rating" data-score = <%= @average_review%>></div>
-            <div>
-              <%= star_reviews(@average_review) %>
-            </div>
-            <span class= "number-of-reviews">Based on  <%= @book.reviews.size %> reviews </span>
-            <p class = "book-desc"><%= @book.description %></p>
-          </div>
-    </div>
-
-  </div>
-
-    <div>
-      <div class = "col-md-4">
-
-        <div class = "reviews">
-            <h1>Reviews</h1>
-            <%= render @book.reviews %>
-      <div>
-            <%= link_to "Add Review", new_book_review_path(@book), class: "btn btn-success" %>
-          </div>
-        </div>
-      </div>
-    <div class="navs">
-      <% if user_signed_in? %>
-        <% if @book.user_id == current_user.id %>
-          <%= link_to "Edit", edit_book_path(@book) %>
-          <%= link_to "Delete", book_path(@book), method: :delete, data: {confirm: "Are You Sure?"} %>
-        <% end %>
-      <% end %>
-    </div>
-    </div>
-</div>
- -->
-
  <div class="nav">
     <h3 class="text-muted center-nav"> <%= @book.title%></h3>
     
@@ -76,7 +30,7 @@
         </div>
         <div class="card-footer d-flex">
             <small class="text-muted">Created <%= time_ago_in_words(@book.created_at)%> ago</small><br>
-            <%= render 'edit' %>
+            <%= edit %>
         </div>
       </div>
     </div>

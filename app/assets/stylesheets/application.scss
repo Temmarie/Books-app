@@ -286,3 +286,23 @@ input:checked ~ label {
 .form-group input {
   display: inline-block;
 }
+
+.avatar {
+  width: 170px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+.user-account {
+  display: block;
+}
+
+.profile {
+  display: block;
+  align-items: center;
+  margin-left: 25%;
+}
+
+.page-content {
+  margin-left: 20%;
+}

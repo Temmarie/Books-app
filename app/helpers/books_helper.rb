@@ -16,5 +16,9 @@ module BooksHelper
     end
   end
   # rubocop:enable Metrics/CyclomaticComplexity
+
+  def edit
+    render 'edit' if @book.user_id == current_user.id
+  end
 end
 # rubocop:enable Metrics/PerceivedComplexity

@@ -1,8 +1,4 @@
 <small class="navs">
-      <% if user_signed_in? %>
-        <% if @book.user_id == current_user.id %>
-          <%= link_to "Edit", edit_book_path(@book), class: "text-muted" %>
-          <%= link_to "Delete", book_path(@book), method: :delete, data: {confirm: "Are You Sure?" } %>
-        <% end %>
-      <% end %>
+  <%= link_to "Edit", edit_book_path(@book), class: "text-muted" %>
+  <%= link_to "Delete", book_path(@book), method: :delete, data: {confirm: "Are You Sure?" } %>
 </small>

@@ -1,36 +1,38 @@
-<section class='h-100vh container-fluid'>
+<div class="container-fluid">
+  <section>
+    <header class=" text-muted">
+      <%= check_image(@user)%>
+      <h1> <%= @user.name %>'s Profile </h1>
+    </header>
+        <div class = "user-account">
+          <div class = "setings">
+              <i class="fa fa-cog icon" aria-hidden="true"></i>
+                <%= link_to 'Profile', edit_user_registration_path %>
+          </div>
+              <br />
+              <div class = "setings">
+                <i class = "fa fa-book icon", aria-hidden="true"></i> 
+                <%= link_to 'My Books', books_path(current_user) %>
+              </div>
+            <br>
 
+            <div class = "setings">
+                <i class = "fa fa-book icon", aria-hidden="true"></i> 
+                <%= link_to 'Recommended', external_path %>
+              </div>
+            <br>
 
-	<header class="mt-4 mb-2 py-3  text-muted">
-	</header>
-      <div class = "user-account">
-        <div class = "setings">
-            <i class="fa fa-cog icon" aria-hidden="true"></i>
-              <%= link_to 'Profile', edit_user_registration_path %>
-        </div>
+            <div class = "setings">
+                <i class="fa fa-plus icon" aria-hidden="true"></i>
+                <%= link_to 'Add new book', new_book_path %>
+            </div>
             <br />
             <div class = "setings">
-              <i class = "fa fa-book icon", aria-hidden="true"></i> 
-              <%= link_to 'My Books', books_path(current_user) %>
+              <i class="fa fa-users icon" aria-hidden="true"></i>
+              <%= link_to 'Groups', groups_path %>
             </div>
-          <br>
-
-          <div class = "setings">
-              <i class = "fa fa-book icon", aria-hidden="true"></i> 
-              <%= link_to 'Recommended', external_path %>
-            </div>
-          <br>
-
-          <div class = "setings">
-              <i class="fa fa-plus icon" aria-hidden="true"></i>
-              <%= link_to 'Add new book', new_book_path %>
-          </div>
-          <br />
-          <div class = "setings">
-            <i class="fa fa-users icon" aria-hidden="true"></i>
-            <%= link_to 'Groups', groups_path %>
           </div>
         </div>
-      </div>
 
-</section>
+  </section>
+</div>

@@ -12,18 +12,7 @@
     font-family: sans-serif; " %>
     </li>
 
-      <% if user_signed_in? %>
-          <li class = "nav-item">
-            <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "nav-link text-white", style: "font-family: sans-serif;" %>
-          </li>
-          <% else %>
-          <li class = "nav-item">
-          <%= link_to "Log In", new_user_session_path, class: "nav-link text-white", style: "font-family: sans-serif;"%>
-          </li>
-        <li class = "list-item">
-          <%= link_to "Sign Up", new_user_registration_path, class: "nav-link text-white", style: "font-family: sans-serif;" %>
-        </li>
-        <% end %>
+<%= signed_in %>
 
 
 
