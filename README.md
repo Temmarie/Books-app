@@ -31,7 +31,7 @@ To test the BooksApp locally, you will need to clone the repository, navigate to
 
 Clone the repository and follow the steps to run the app.
 ```
- git clone git@github.com:BrittanyBlake/Bookable-app.git
+ git clone https://github.com/Temmarie/Books-app.git
 
 ```
 
