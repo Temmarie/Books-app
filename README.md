@@ -16,10 +16,24 @@ To get a local copy up and running follow these simple example steps.
 - Ruby: 2.6.3
 - Rails: 5.2.3
 - Postgres: >=9.5
+- Cloudinary (for access key and secret key to upload images in production environment)
 - You can set up webpacker locally [here](https://github.com/rails/webpacker#installation)
+
 ### Setup
 
-Instal gems with:
+To test the BooksApp locally, you will need to clone the repository, navigate to it's containing directory, and run the following commands:
+
+
+
+Clone the repository and follow the steps to run the app.
+```
+ git clone git@github.com:BrittanyBlake/Bookable-app.git
+
+```
+
+
+
+Install gems with:
 
 ```
 bundle install
