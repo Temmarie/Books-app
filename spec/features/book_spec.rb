@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Creating a new book', type: :feature do
   before(:each) do
     @user = User.new(
+      name: 'Trish',
       email: 'Trish@email.com',
       password: 'qwerty',
       password_confirmation: 'qwerty'
@@ -26,7 +27,8 @@ RSpec.describe 'Creating a new book', type: :feature do
 
   scenario 'does not create book with invalid inputs' do
     click_on 'Add new book'
+    fill_in 'Title', with: 'P'
     click_button 'Create Book'
-    expect(page).to have_content('Please review the problems below:')
+    expect(page).to have_content('Title is too short (minimum is 3 characters)')
   end
 end

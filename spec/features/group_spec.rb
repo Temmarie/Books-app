@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Signing In a new user', type: :feature do
   before(:each) do
     @user = User.new(
+      name: 'Trish',
       email: 'Trish@email.com',
       password: 'qwerty',
       password_confirmation: 'qwerty'
