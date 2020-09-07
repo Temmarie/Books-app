@@ -1,12 +1,4 @@
 @import "bootstrap/scss/bootstrap";
-
-@mixin background-tile {
-  box-sizing: border-box;
-  background-color: #fff;
-  box-shadow: 3px 3px 5px 6px #ccc;
-  padding: 1.5em 1.25em;
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -19,6 +11,7 @@ body {
   font-family: 'Roboto Condensed', sans-serif;
   background-color: #faf8f7;
 }
+
 //nav styles
 .navbar {
   background-color: #3778c2;
@@ -59,55 +52,6 @@ body {
   background-color: #28a745;
   border-color: #1e7e34;
   box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
-}
-
-//Book styles
-input {
-  display: none;
-}
-
-.image-field input {
-  display: block;
-}
-
-.books {
-  display: flex;
-  flex-direction: row;
-}
-
-.book img {
-  vertical-align: middle;
-  border-style: none;
-  height: 250px;
-  width: 170px;
-}
-
-.book-show img {
-  height: 375px;
-  width: 245px;
-}
-
-//stars
-
-.test-group {
-  display: flex;
-  flex-direction: row-reverse;
-  margin: 0 auto;
-  width: max-content;
-}
-
-input:checked ~ label {
-  color: #ffdd40;
-}
-
-.starred ~ i,
-.starred {
-  color: #ffdd40;
-}
-
-.starred-div {
-  display: flex;
-  flex-direction: row-reverse;
 }
 
 .navbar a {
@@ -180,77 +124,6 @@ input:checked ~ label {
   border-color: #28a745;
 }
 
-/* Book styles */
-
-.book-info {
-  @include background-tile;
-
-  .book-title {
-    margin-top: 0;
-    font-size: 2em;
-  }
-
-  .number-of-reviews {
-    font-size: 0.85em;
-    font-style: italic;
-  }
-
-  .book-author {
-    font-size: 1.5em;
-    margin-top: 10px;
-    margin-bottom: 10px;
-
-    span {
-      font-size: 0.8em;
-    }
-  }
-
-  .book-desc {
-    font-size: 1.05em;
-    line-height: 1.5;
-    margin-bottom: 15px;
-    margin-top: 15px;
-  }
-}
-
-/* Reviews styles */
-
-.reviews {
-  @include background-tile;
-
-  margin-top: 40px;
-
-  h1 {
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-size: 2em;
-  }
-
-  .review {
-    border-bottom: 1px solid gainsboro;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-
-    .review-comment {
-      font-size: 1.05em;
-      line-height: 1.5;
-    }
-  }
-
-  .new-review {
-    padding-top: 8px;
-  }
-}
-
-.group-check input {
-  display: inline-block;
-}
-
-.book-group img {
-  height: 220px;
-  width: 180px;
-}
-
 .center-nav {
   display: flex;
   align-items: center;
@@ -283,26 +156,3 @@ input:checked ~ label {
   flex-flow: row;
 }
 
-.form-group input {
-  display: inline-block;
-}
-
-.avatar {
-  width: 170px;
-  height: 250px;
-  border-radius: 50%;
-}
-
-.user-account {
-  display: block;
-}
-
-.profile {
-  display: block;
-  align-items: center;
-  margin-left: 25%;
-}
-
-.page-content {
-  margin-left: 20%;
-}
