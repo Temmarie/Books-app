@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Book, type: :model do
   let(:user) { User.new }
-  let(:user1) { User.create(name: 'Trish',email: 'trish@email.com', password: 'abc123') }
+  let(:user1) { User.create(name: 'Trish', email: 'trish@email.com', password: 'abc123') }
 
   describe 'associations' do
     it { should have_many(:book_groups) }
