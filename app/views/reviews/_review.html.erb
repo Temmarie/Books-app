@@ -6,4 +6,8 @@
             </div>
 <p>  <%= review.comment %> </p>
 
-<%= edit_review %>
+		<% if review.user_id == current_user.id %>
+			<div>
+        <%= link_to "Edit", edit_book_review_path(review.book, review), class: "btn btn-custom" %>
+			</div>
+    <% end %>
