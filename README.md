@@ -1,24 +1,104 @@
-# README
+# GeeksRead
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## User's Profile Page
+![user-show](https://github.com/Temmarie/Books-app/blob/feature/app/assets/images/user-show.png)
 
-Things you may want to cover:
+## Book list
 
-* Ruby version
+![book-list](https://github.com/Temmarie/Books-app/blob/feature/app/assets/images/booklist.png)
 
-* System dependencies
+## Books show page
+![book-show](https://github.com/Temmarie/Books-app/blob/feature/app/assets/images/book-show.png)
 
-* Configuration
+## Groups list
+![groups](https://github.com/Temmarie/Books-app/blob/feature/app/assets/images/groups.png)
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
+> In this project, I created an app that allows you to register books you've read and group them based on their genres. As an extra feature, I implemented a feature that allows you to review other people's books as well as see reviews from different people on the book based on a 5-star rating. 
 
-* Services (job queues, cache servers, search engines, etc.)
+## Built With
 
-* Deployment instructions
+- Ruby v2.7.0
+- Ruby on Rails version 6.0.3.2
 
-* ...
+## Getting Started
+
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+- Ruby: 2.6.3
+- Rails: 5.2.3
+- Postgres: >=9.5
+- Cloudinary (for access key and secret key to upload images in production environment)
+- You can set up webpacker locally [here](https://github.com/rails/webpacker#installation)
+
+### Setup
+
+To test the BooksApp locally, you will need to clone the repository, navigate to it's containing directory, and run the following commands:
+
+
+
+Clone the repository and follow the steps to run the app.
+```
+ git clone https://github.com/Temmarie/Books-app.git
+
+```
+
+
+
+Install gems with:
+
+```
+bundle install
+```
+
+Setup database with:
+
+```
+   rails db:create
+   rails db:migrate
+```
+
+
+
+### Usage
+
+Start server with:
+
+```
+    rails server
+```
+
+Open `http://localhost:3000/` in your browser.
+
+### Run tests
+
+```
+    rpsec spec
+```
+### Deployment
+[Live link](https://bookgroups.herokuapp.com/)
+
+## Author
+
+👤 Grace Tamara Ekunola
+
+- Github: @Temmarie
+- Twitter: @TemmarieW
+- Linkedin: Grace Tife Ekunola
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+
+## Acknowledgements
+- The original designer of the UI for this application is [Gregoire Vella](https://www.behance.net/gregoirevella)

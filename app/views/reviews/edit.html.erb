@@ -1,0 +1,45 @@
+<head>
+  <%= stylesheet_link_tag 'books.css' %>
+<head>
+
+<div class="container-fluid centered">
+    <h1>Edit Review</h1>
+
+
+    <%= simple_form_for([@book, @review]) do |f| %>
+    <div class="field test-group">
+        <%= f.radio_button :rating, 1 %>
+        <%= f.label :rating, value: 1 do %>
+          <i class="fa fa-star" aria-hidden="true"></i>
+        <% end %>
+
+        <%= f.radio_button :rating, 2 %>
+        <%= f.label :rating, "2", value: 2 do %>
+          <i class="fa fa-star" aria-hidden="true"></i>
+        <% end %>
+
+        <%= f.radio_button :rating, 3 %>
+        <%= f.label :rating, "3", value: 3 do %>
+          <i class="fa fa-star" aria-hidden="true"></i>
+        <% end %>
+        
+        <%= f.radio_button :rating, 4 %>
+        <%= f.label :rating, "4", value: 4 do %>
+          <i class="fa fa-star" aria-hidden="true"></i>
+        <% end %>
+
+        <%= f.radio_button :rating, 5 %>
+
+        <%= f.label :rating, "5", value: 5 do %>
+          <i class="fa fa-star" aria-hidden="true"></i>
+        <% end %>
+      </div>
+
+        <div class = "col-md-6">
+        <%= f.input :comment %>
+          <div class="update">
+            <%= f.button :submit, class:"submit" %>
+          </div>
+        </div>
+    <%end%>
+</div>

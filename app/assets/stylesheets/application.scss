@@ -1,0 +1,158 @@
+@import "bootstrap/scss/bootstrap";
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: #faf8f7;
+}
+
+//nav styles
+.navbar {
+  background-color: #3778c2;
+  padding: 1em;
+}
+
+.nav-item a {
+  color: white;
+}
+
+//log and sign in styles
+
+.btn {
+  width: 30%;
+}
+
+.submit {
+  background-color: #28a745;
+  border-color: #1e7e34;
+  box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
+  color: white;
+  font-weight: bold;
+}
+
+.update .submit {
+  background-color: #28a745;
+  border-color: #1e7e34;
+  box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
+}
+
+.form-actions .submit {
+  background-color: #28a745;
+  border-color: #1e7e34;
+  box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
+}
+
+.control .submit {
+  background-color: #28a745;
+  border-color: #1e7e34;
+  box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
+}
+
+.navbar a {
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 22.5px;
+  color: rgb(255, 255, 255);
+}
+
+.title {
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 22.5px;
+  color: black;
+}
+
+.field {
+  padding: 1em;
+}
+
+.alert-success {
+  color: white;
+  font-size: 15px;
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  background-color: rgb(14, 243, 14);
+}
+
+.alert-danger {
+  color: white;
+  font-size: 15px;
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  background-color: rgb(255, 0, 0);
+}
+
+.username {
+  color: rgb(0, 255, 179);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.picture-upload {
+  color: black;
+  font-weight: 500;
+}
+
+.cancel {
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.setings a {
+  color: rgb(23, 108, 235);
+  font-size: larger;
+  font-weight: 500;
+}
+
+.icon {
+  color: skyblue;
+  font-size: 2em;
+}
+
+.btn-success {
+  color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.center-nav {
+  display: flex;
+  align-items: center;
+  margin-left: 25%;
+}
+
+.center-nav-2 {
+  display: flex;
+  align-items: center;
+  margin-left: 15%;
+}
+
+.card-horizontal {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.navs {
+  margin: 0 auto;
+  justify-content: space-evenly;
+}
+
+.navs a {
+  color: rgb(108, 117, 125);
+}
+
+.set {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row;
+}

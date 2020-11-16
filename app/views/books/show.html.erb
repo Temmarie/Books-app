@@ -1,0 +1,57 @@
+<head>
+<%= stylesheet_link_tag 'books.css' %>
+<head>
+ <div class="nav">
+    <h3 class="text-muted center-nav"> <%= @book.title%></h3>
+    
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 mt-3">
+      <div class="card mb-3">
+        <div class="card-horizontal">
+
+          <div class="img-square-wrapper">
+              <%= link_to cl_image_tag(@book.image), books_path, class: "book-show" %>
+          </div>
+
+          <div class="card-body">
+            
+            <p class="card-text  text-muted "><strong> Author:</strong> <%= @book.author %></p>
+            <div class="set">
+              <p class = "avg-rating">Average Rating  <%= star_reviews(@average_review) %></p>
+            </div>
+            <div class = "average-review-rating" data-score = <%= @average_review%>>
+            </div>
+ 
+            <span class= "number-of-reviews text-muted">Based on  <%= @book.reviews.size %> reviews </span>
+                  <p class="card-text  text-muted "><strong> Description:</strong> <%= @book.description %></p>
+                  <%= render @book.groups%>
+          </div>
+        </div>
+        <div class="card-footer d-flex">
+            <small class="text-muted">Created <%= time_ago_in_words(@book.created_at)%> ago</small><br>
+            <%= edit %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+      <div class="col-12 mt-3">
+      <div class = "card mb-3">
+
+        <div class = "card-horizontal">
+          <div class="card-body">
+              <h3>Reviews</h3>
+              <%= render @book.reviews %>
+            <div>
+              <%= link_to "Add Review", new_book_review_path(@book), class: "btn btn-success" %>
+            </div>
+            </div>
+        </div>
+      </div>
+  </div>
+</div>

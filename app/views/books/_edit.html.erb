@@ -1,0 +1,4 @@
+<small class="navs">
+  <%= link_to "Edit", edit_book_path(@book), class: "text-muted" %>
+  <%= link_to "Delete", book_path(@book), method: :delete, data: {confirm: "Are You Sure?" } %>
+</small>
